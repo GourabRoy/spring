@@ -1,0 +1,26 @@
+<project name="Tomcat" default="dist" basedir=".">
+
+	<target name="clean" >
+		<echo> Cleaning existing libraries</echo>
+		<delete dir="lib"/>
+		<mkdir dir="lib"/>
+	</target>
+
+	<target name="resolve_dependencies">
+		<exec executable="mvn">
+			<arg value="dependency:resolve"/>
+		</exec>
+	</target>
+	
+	<target name="copy1" depends="resolve_dependencies">
+		<echo>Copies libraries in maven local repository into flatter lib directory</echo>
+		<copy todir="lib" flatten="true" includeemptydirs="false">
+			<fileset dir="../maven-repository">
+				<exclude name="**/*.pom" />
+				<exclude name="**/*.sha1" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="dist" depends="clean,copy1" />
+</project>

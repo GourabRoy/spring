@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/tomcat_bin"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tomcat_lib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/gourabroy/workspace/Tomcat/lib/jackson-core-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="/Users/gourabroy/workspace/Tomcat/lib/jackson-jaxrs-1.9.13.jar"/>
+	<classpathentry kind="lib" path="/Users/gourabroy/workspace/Tomcat/lib/jackson-mapper-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="/Users/gourabroy/workspace/Tomcat/lib/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="output" path="webapps/WEB-INF/classes"/>
+</classpath>
