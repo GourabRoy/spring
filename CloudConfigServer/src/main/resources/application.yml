@@ -1,0 +1,11 @@
+server:
+  port: 8888
+
+spring:
+  profile:
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///C:/Users/Public/config
+#          force-pull: true
