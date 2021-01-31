@@ -1,8 +1,17 @@
-Create folder C:/Users/Public/config
-cd C:/Users/Public/config
-git init
-
+Step 1
+Create folder <PropertyPath>
+cd <PropertyPath>
 Create files movielens.properties, movielens-dev.properties, movielens-qa.properties, movielens-prod.properties
 
-git add
-git commit -m "adding property files"
+set this to the config on application.yml
+
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          searchlocations: file:///<PropertyPath>
+
+Step 2
+Add the following to VM args
+-Dspring.profiles.active=native
